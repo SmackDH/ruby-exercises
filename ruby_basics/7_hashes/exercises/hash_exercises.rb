@@ -21,14 +21,14 @@ end
 
 
 
-
-
 def update_favorite_movie(favorite_list, movie)
   # Step 1: add/update the key of movie (as a symbol)
-  movie = :movie
+  new_hash = {:movie => movie}
   # Step 2: return the hash (because Step 1 returns the value of the movie key)
-  favorite_list[movie]
+  favorite_list.merge(new_hash)
 end
+
+
 
 def remove_favorite_number(favorite_list)
   # Step 1: delete the number data
