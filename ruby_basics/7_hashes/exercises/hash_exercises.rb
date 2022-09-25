@@ -12,12 +12,7 @@ end
 
 def favorite_number(favorite_list)
   # use #fetch to return the value of the number key or 42 if the key is not found
-  favorite_list.fetch(:nosuch) {|number| :default}
-  favorite_list.fetch(:nosuch, :default)
-  favorite_list.fetch(:number, :default)
-  
-  favorite_list.fetch(:number) {|number| :default}
-  favorite_list.fetch(:number) {|default_value| default_value}
+  favorite_list.fetch(:number) {|number| 42}
 
 
   # figure out how to get the default value if it can't find the key :number
