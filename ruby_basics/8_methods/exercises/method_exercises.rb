@@ -44,12 +44,13 @@ end
 # hint: use String#ord
 
 def ascii_code(character)
-    character = character.to_s
-    if character.ord != 1
-        return "Input Error"
-    else 
-        return
-    end
+    # if character.ord != 1
+    #     return "Input Error"
+    # else 
+    #     return
+    # end
+    character.length == 1 ? character.ord : "Input Error"
+
 end
 
 # method name: #pet_pun
@@ -60,9 +61,20 @@ end
 # console output: otherwise, "I think <animal>s have pet-tential!" (potential)
 # hint: use puts
 
+def pet_pun(animal)
+    if animal == "dog"
+        puts "Dogs are paw-some!"
+    elsif animal == "cat"
+        puts "Cats are purr-fect!"
+    else
+        puts "I think #{animal}s have pet-tential!"
+    end
+end
 
 # method name: #twenty_first_century?
 # parameter: year (an integer)
 # return value: true if the year is between 2001 - 2100, otherwise return false
 # hint: use Comparable#between?
-
+def twenty_first_century?(year)
+    year.between?(2001, 2100)
+end
