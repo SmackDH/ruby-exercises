@@ -34,7 +34,7 @@ end
 
 # This next exercise might look familiar
 # Use p and puts in order to find what's wrong with our method
-
+# Should return true as it is an isogram
 
 def isogram?(string)
 
