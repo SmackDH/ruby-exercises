@@ -40,11 +40,9 @@ end
 def isogram?(string)
 
   original_length = string.length
-  string_array = string.downcase.split
-  unique_length = string_array.uniq
+  string_array = string.downcase.split("")
+  unique_length = string_array.uniq.count
   original_length == unique_length
-
-
 
 end
 
